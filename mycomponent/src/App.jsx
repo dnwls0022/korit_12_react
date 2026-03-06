@@ -1,7 +1,7 @@
 
 import './App.css'
 
-import Myform2 from './MyForm2'
+
 import MyForm3 from './MyForm3'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <br />
       <br />
       <br />
-      <Myform2/>
+     
     </>
   )
 }
