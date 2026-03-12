@@ -1,4 +1,5 @@
 //주석 모두첨가한버전
+//자식 additem
 import { useState } from "react";
 // MUI(Material UI)에서 예쁜 디자인의 컴포넌트들을 가져옵니다.
 import { TextField, Dialog, DialogActions, DialogContent, DialogTitle, Button } from "@mui/material";
@@ -27,7 +28,7 @@ export default function AddItem(props: AddItemProps) {
   const handleOpen = () => setOpen(true);
   
   // 팝업창을 닫는 함수 (취소 버튼이나 배경 클릭 시 실행)
-  const handleClose = () => setOpen(false);
+  const handleClose = () => setOpen(true);
 
   // [핵심 로직] 'Add' 버튼을 눌렀을 때 실행되는 함수입니다.
   const addItem = () => {
@@ -89,3 +90,5 @@ export default function AddItem(props: AddItemProps) {
     </>
   );
 }
+/// 가격은 형변환을해줘야한다.
+//  number를 대문자 price: Number(e.target.value)

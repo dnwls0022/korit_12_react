@@ -1,4 +1,5 @@
 // 주석있는 앱 
+// 부모 app
 import { Container, AppBar, Toolbar, Typography, List, ListItem, ListItemText } from '@mui/material'
 import { useState } from 'react'
 import './App.css'
@@ -30,7 +31,7 @@ function App() {
         <AppBar position='static'>
           <Toolbar>
             <Typography variant='h6'>
-              Shopping list
+              쇼핑목록
             </Typography>
           </Toolbar>
         </AppBar>

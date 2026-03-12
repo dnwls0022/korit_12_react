@@ -1,0 +1,31 @@
+import { AppBar, Container, Toolbar, Typography, CssBaseline } from '@mui/material'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import Carlist from './components/carlist'
+import './App.css'
+
+const queryClient = new QueryClient
+
+
+
+function App() {
+  
+
+  return (
+    <Container maxWidth='xl'>
+    <CssBaseline/>
+    <AppBar position='static'>
+      <Toolbar>
+        <Typography variant='h6'>
+          car shop
+        </Typography>
+      </Toolbar>
+    </AppBar>
+    <QueryClientProvider client={queryClient}>
+    <Carlist></Carlist>
+    </QueryClientProvider>
+    
+    </Container>
+  )
+}
+
+export default App

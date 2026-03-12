@@ -1,47 +1,35 @@
-import { Container,AppBar, Toolbar,Typography,List,ListItem, ListItemText } from '@mui/material'
 import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
-//주의
-import AddItem from './AddItem'
-export type Item = {
-  product: string;
-  amount: string;
-  price: string;
-  
-}
+
 function App() {
-  const [items, setItems] = useState<Item[]>([]);
-  const addItem = (item: Item) =>{
-    setItems([item, ...items]);
-    //배열을 업데이트해주는것setItems
-  }
+  const [count, setCount] = useState(0)
+
   return (
     <>
-    <Container>
-    <AppBar position='static'>
-      <Toolbar>
-        <Typography variant='h6'>
-          Shopping list
-        </Typography>
-      </Toolbar>
-    </AppBar>
-    <AddItem addItem={addItem} />
-    <List>
-    {
-      items.map((item,index) =>
-      <ListItem key={index} divider>
-        
-        <ListItemText 
-        primary={item.product}
-        secondary={`${item.amount}개 - 가격${item.price}`}
-        
-        />
-      </ListItem>
-      )
-    }  
-    </List>  
-    </Container> 
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   )
 }
+
 export default App
