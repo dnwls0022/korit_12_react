@@ -1,6 +1,6 @@
 import { AppBar, Container, Toolbar, Typography, CssBaseline } from '@mui/material'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import Carlist from './components/carlist'
+import Carlist from './components/Carlist'
 import './App.css'
 
 const queryClient = new QueryClient
